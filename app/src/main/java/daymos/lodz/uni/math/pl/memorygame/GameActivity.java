@@ -9,10 +9,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.io.IOException;
 
 public class GameActivity extends AppCompatActivity {
+
 
     private ImageView img11;
     private ImageView img12;
@@ -26,6 +28,7 @@ public class GameActivity extends AppCompatActivity {
     private ImageView img24;
     private ImageView img25;
     private ImageView img26;
+    private TextView textView1;
     private Button startGame;
     public static final int PICK_IMAGE_1= 1;
     public static final int PICK_IMAGE_2= 2;
@@ -95,6 +98,14 @@ public class GameActivity extends AppCompatActivity {
             }
         });
 
+        startGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeVisibility();
+
+
+            }
+        });
     }
 
     @Override
@@ -140,7 +151,7 @@ public class GameActivity extends AppCompatActivity {
             try {
                 Bitmap image_4 = MediaStore.Images.Media.getBitmap(this.getContentResolver(), mImageProfileUri);
                 img14.setImageBitmap(image_4);
-                
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -171,9 +182,32 @@ public class GameActivity extends AppCompatActivity {
     }
 
 
+    private void changeVisibility(){
+        textView1.setVisibility(View.INVISIBLE);
+        startGame.setVisibility(View.INVISIBLE);
+
+        img11.setVisibility(View.VISIBLE);
+        img12.setVisibility(View.VISIBLE);
+        img13.setVisibility(View.VISIBLE);
+        img14.setVisibility(View.VISIBLE);
+        img15.setVisibility(View.VISIBLE);
+        img16.setVisibility(View.VISIBLE);
+        img21.setVisibility(View.VISIBLE);
+        img22.setVisibility(View.VISIBLE);
+        img23.setVisibility(View.VISIBLE);
+        img24.setVisibility(View.VISIBLE);
+        img25.setVisibility(View.VISIBLE);
+        img26.setVisibility(View.VISIBLE);
+
+
+    }
 
     private void init() {
         setTitle("Memory Game");
+
+        img11 = findViewById(R.id.img11);
+        img12 = findViewById(R.id.img12);
+        img13 = findViewById(R.id.img13);
         img11 = findViewById(R.id.img11);
         img12 = findViewById(R.id.img12);
         img13 = findViewById(R.id.img13);
@@ -186,6 +220,7 @@ public class GameActivity extends AppCompatActivity {
         img24 = findViewById(R.id.img24);
         img25 = findViewById(R.id.img25);
         img26 = findViewById(R.id.img26);
+        textView1= (TextView) findViewById(R.id.text1);
         startGame = (Button) findViewById(R.id.startGame);
 
 
