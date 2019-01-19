@@ -21,7 +21,6 @@ public class GameActivity extends AppCompatActivity {
     private ImageView img4;
     private ImageView img5;
     private ImageView img6;
-    private ImageView img21;
     private TextView textView1;
     private Button startGame;
     public static final int PICK_IMAGE_1= 1;
@@ -32,7 +31,6 @@ public class GameActivity extends AppCompatActivity {
     public static final int PICK_IMAGE_6= 6;
     public static final String IMAGE_LIST="IMAGE_LIST";
     public static final String URI_IMAGE_LIST="URI_IMAGE_LIST";
-    // private ArrayList<Bitmap> imageList;
     private ArrayList<Uri> uriImageList;
 
 
@@ -43,7 +41,6 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
         init();
 
-        //imageList = new ArrayList<Bitmap>();
         uriImageList = new ArrayList<Uri>();
         img1.setOnClickListener(new View.OnClickListener() {
             @Override

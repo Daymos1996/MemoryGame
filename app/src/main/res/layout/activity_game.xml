@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:weightSum="4"
     tools:context=".GameActivity">
 
     <LinearLayout
@@ -20,13 +20,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/text1"
-        android:text="Choose six photos"
+        android:text="@string/Choose_six_photos"
         android:textColor="#FF335F"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:fontFamily="casual"
         android:gravity="center"
         android:textStyle="bold"
-        android:visibility="visible"
         android:layout_gravity="center_horizontal"  />
 
 
@@ -59,7 +58,6 @@
             android:scaleType="centerInside"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="visible"
             android:src="@drawable/znak"/>
 
         <ImageView
@@ -70,7 +68,6 @@
             android:scaleType="centerInside"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="visible"
             android:src="@drawable/znak"/>
 
 
@@ -93,7 +90,6 @@
             android:scaleType="centerInside"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="visible"
             android:src="@drawable/znak"/>
 
         <ImageView
@@ -103,7 +99,6 @@
             android:scaleType="centerInside"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="visible"
             android:src="@drawable/znak"/>
 
         <ImageView
@@ -114,7 +109,6 @@
             android:scaleType="centerInside"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="visible"
             android:src="@drawable/znak"/>
 
 

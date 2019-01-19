@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".GameActivity">
+    tools:context=".PlayGameActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
+        android:weightSum="1"
         android:layout_weight="1"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:fontFamily="casual"
             android:gravity="center"
-            android:text="Good Luck"
+            android:text="@string/Good_luck"
             android:textColor="#FF335F"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
 
@@ -45,7 +44,6 @@
             android:id="@+id/img11"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
             android:src="@drawable/znak"
