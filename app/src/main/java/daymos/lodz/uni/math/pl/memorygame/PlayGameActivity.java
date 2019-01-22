@@ -82,7 +82,7 @@ public class PlayGameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int theCard = Integer.parseInt((String ) view.getTag());
-                doStuff(img11, theCard);
+                checkStatus(img11, theCard);
             }
         });
 
@@ -90,7 +90,7 @@ public class PlayGameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int theCard = Integer.parseInt((String ) view.getTag());
-                doStuff(img12, theCard);
+                checkStatus(img12, theCard);
             }
         });
 
@@ -98,7 +98,7 @@ public class PlayGameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int theCard = Integer.parseInt((String ) view.getTag());
-                doStuff(img13, theCard);
+                checkStatus(img13, theCard);
             }
         });
 
@@ -106,7 +106,7 @@ public class PlayGameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int theCard = Integer.parseInt((String ) view.getTag());
-                doStuff(img14, theCard);
+                checkStatus(img14, theCard);
             }
         });
 
@@ -114,7 +114,7 @@ public class PlayGameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int theCard = Integer.parseInt((String ) view.getTag());
-                doStuff(img15, theCard);
+                checkStatus(img15, theCard);
             }
         });
 
@@ -122,7 +122,7 @@ public class PlayGameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int theCard = Integer.parseInt((String ) view.getTag());
-                doStuff(img16, theCard);
+                checkStatus(img16, theCard);
             }
         });
 
@@ -130,7 +130,7 @@ public class PlayGameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int theCard = Integer.parseInt((String ) view.getTag());
-                doStuff(img21, theCard);
+                checkStatus(img21, theCard);
             }
         });
 
@@ -138,7 +138,7 @@ public class PlayGameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int theCard = Integer.parseInt((String ) view.getTag());
-                doStuff(img22, theCard);
+                checkStatus(img22, theCard);
             }
         });
 
@@ -146,7 +146,7 @@ public class PlayGameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int theCard = Integer.parseInt((String ) view.getTag());
-                doStuff(img23, theCard);
+                checkStatus(img23, theCard);
             }
         });
 
@@ -154,7 +154,7 @@ public class PlayGameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int theCard = Integer.parseInt((String ) view.getTag());
-                doStuff(img24, theCard);
+                checkStatus(img24, theCard);
             }
         });
 
@@ -162,7 +162,7 @@ public class PlayGameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int theCard = Integer.parseInt((String ) view.getTag());
-                doStuff(img25, theCard);
+                checkStatus(img25, theCard);
             }
         });
 
@@ -170,7 +170,7 @@ public class PlayGameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int theCard = Integer.parseInt((String ) view.getTag());
-                doStuff(img26, theCard);
+                checkStatus(img26, theCard);
             }
         });
 
@@ -183,7 +183,7 @@ public class PlayGameActivity extends AppCompatActivity {
 
     }
 
-    private void doStuff(ImageView img, int card) {
+    private void checkStatus(ImageView img, int card) {
 
         //set the correct image to the imageview
         if(cardsArray[card]== 101){
@@ -248,7 +248,7 @@ public class PlayGameActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     //check if the images are the same
-                    calculate();
+                    comparison();
                 }
             }, 1000);
 
@@ -257,7 +257,7 @@ public class PlayGameActivity extends AppCompatActivity {
 
     }
 
-    private void calculate() {
+    private void comparison() {
         if(firstCard==secendCard){
             if(clickedFirst==0){
                 img11.setVisibility(View.INVISIBLE);
